@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  production:
+    container_name: prostoregress-prod
+    build:
+      context: .
+      dockerfile: docker/prod/Dockerfile
+    ports:
+      - "3035:80"
+    volumes:
+      - ./docker/prod/nginx.conf:/etc/nginx/nginx.conf:ro
+networks:
+  prod:
+    driver: bridge

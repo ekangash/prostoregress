@@ -20,7 +20,15 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "allowSyntheticDefaultImports": true,
-    "include": ["components",  "enums", "hooks", "packages"],
+    "include": [
+        "components/*.tsx",
+        "enums/*.tsx",
+        "hooks/*.tsx",
+        "packages/*.tsx",
+        "*.tsx",
+        "*.ts",
+        "node_modules/@types/node/globals.d.ts"
+    ],
     "compilerOptions": {
         "jsx": "react-jsx",
         "baseUrl": ".",
@@ -28,5 +36,7 @@
             "@/*": ["./*"]
         },
         "allowSyntheticDefaultImports": true,
-    }
+        "rootDir": "."
+    },
+    "allowJs": false
 }

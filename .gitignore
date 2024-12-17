@@ -9,13 +9,9 @@ lerna-debug.log*
 
 node_modules
 dist
+src
 dist-ssr
 *.local
-
-/components/**/*.js
-/enums/**/*.js
-/hooks/**/*.js
-/packages/**/*.js
 
 tsconfig.app.tsbuildinfo
 
