@@ -10,5 +10,13 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./"),
     }
+  },
+  server: {
+    watch: {
+      usePolling: true,
+    },
+    host: true, // needed for the Docker Container port mapping to work
+    strictPort: true, // not necessary
+    port: 3030
   }
 })

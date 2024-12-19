@@ -39,7 +39,6 @@ export const App: React.FC = (): React.ReactElement => {
                         Вам знакомо это?
                     </Caption>
                     <Known />
-
                 </section>
                 <section
                     id="tasks"

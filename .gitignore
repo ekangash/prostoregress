@@ -12,8 +12,7 @@ dist
 src
 dist-ssr
 *.local
-
-tsconfig.app.tsbuildinfo
+.env
 
 # Editor directories and files
 .vscode/*
