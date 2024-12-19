@@ -1,7 +1,7 @@
 version: '3.7'
 services:
-  production:
-    container_name: prostoregress-prod
+  prod-nginx:
+    container_name: prostoregress-prod-nginx
     build:
       context: .
       dockerfile: docker/prod/Dockerfile
@@ -16,12 +16,12 @@ services:
     restart: unless-stopped
     # Перезапустит nginx контейнер каждые 6 часов и подгрузит новые сертификаты, если есть
     command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
-  certbot:
-    container_name: prostoregress-certbot
+  prod-certbot:
+    container_name: prostoregress-prod-certbot
     image: certbot/certbot
     volumes:
-      - ./docker/prod/letsencrypt/certbot/conf:/etc/letsencrypt
-      - ./docker/prod/letsencrypt/certbot/www:/var/www/certbot
+      - ./docker/letsencrypt/certbot/conf:/etc/letsencrypt
+      - ./docker/letsencrypt/certbot/www:/var/www/certbot
     # Перезапустит контейнер в непредвиденных ситуациях
     restart: unless-stopped
     # Проверяет каждые 12 часов, нужны ли новые сертификаты

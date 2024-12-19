@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  prod-nginx:
+    container_name: prostoregress-prod-nginx
+    build:
+      context: .
+      dockerfile: docker/prod/Dockerfile
+    volumes:
+      - ./docker/prod/nginx/without-ssl.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "${DOCKER_PORT_PROD_HTTP}:80"
+      - "${DOCKER_PORT_PROD_HTTPS}:443"

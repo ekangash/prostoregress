@@ -1,7 +1,7 @@
 version: '3.7'
 services:
-  develop:
-    container_name: prostoregress-develop
+  dev-nodejs:
+    container_name: prostoregress-dev-nodejs
     build:
       context: .
       dockerfile: docker/dev/Dockerfile
@@ -9,8 +9,3 @@ services:
       - .:/var/www/app
     ports:
       - "${DOCKER_PORT_DEV}:3030"
-    networks:
-      - develop
-networks:
-  develop:
-    driver: bridge

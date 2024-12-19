@@ -99,3 +99,6 @@ done
 
 echo "### Drop not needed letsencrypt-nginx-webroot container..."
 docker-compose down letsencrypt-nginx-webroot
+
+echo "### Change the owner of certbot certs..."
+sudo chown -R 1000:1000 ./certbot
