@@ -11,6 +11,7 @@ import {cn} from "@/packages/utils";
 interface ImageProps {
     src: string;
     alt?: string;
+    as?: React.ElementType;
     scale?: boolean;
     rounded?: string;
     className?: string;
@@ -23,6 +24,7 @@ interface ImageProps {
 export const Image: React.FC<ImageProps> = ({
     src,
     alt = '',
+    as: As = 'div',
     scale = false,
     rounded= '',
     className = '',
@@ -30,7 +32,7 @@ export const Image: React.FC<ImageProps> = ({
 }): React.ReactElement => {
 
     return (
-        <div {...className.length > 0 ? { className: className } : {}}>
+        <As {...className.length > 0 ? { className: className } : {}}>
             <img
                 src={src}
                 className={cn({
@@ -40,6 +42,6 @@ export const Image: React.FC<ImageProps> = ({
                 alt={alt}
             />
             {children && children}
-        </div>
+        </As>
     );
 };

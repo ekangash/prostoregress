@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  letsencrypt-certbot:
+    container_name: letsencrypt-certbot
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    networks:
+      - letsencrypt
+    restart: unless-stopped
+  letsencrypt-nginx-webroot:
+    image: nginx:latest
+    container_name: letsencrypt-nginx-tmp
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/certbot-default.conf:/etc/nginx/conf.d/default.conf
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    networks:
+      - letsencrypt
+    restart: always
+networks:
+  letsencrypt:

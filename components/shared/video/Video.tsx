@@ -3,8 +3,6 @@ import React from 'react';
 import {cn} from "@/packages/utils";
 
 /** 2 App - Components, Hooks */
-import {Image as ImageIcon} from "lucide-react";
-
 /** 3 Entities, Stores, Packages, Enums ... */
 
 /**

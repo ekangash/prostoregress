@@ -21,14 +21,17 @@ export const AppThemeToggle: React.FC = (): React.ReactElement => {
           onClick={(): void => {
               setTheme(theme === 'dark' ? 'light' : 'dark');
           }}
+          size="square"
       >
           <Icon
-              className="fill-violet-700 block dark:hidden"
+              className="fill-violet-700 text-violet-700 block dark:hidden"
               path={Moon}
+              color="none"
           />
           <Icon
               className="fill-yellow-500 hidden dark:block"
               path={Sunset}
+              color="none"
           />
       </Button>
     );
