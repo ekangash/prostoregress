@@ -108,7 +108,7 @@ export const Form: FormComponent = ({
             </FormInnerProvider>
         </FormProvider>
     );
-};
+}
 
 Form.Checkbox = FormCheckbox;
 Form.Checkbox.displayName = 'FormCheckbox';

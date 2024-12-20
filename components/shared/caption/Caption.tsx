@@ -1,9 +1,9 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from 'react';
-import {cn} from "@/packages/utils";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
+import {cn} from "@/packages/utils";
 
 /**
  * @interface CaptionProps

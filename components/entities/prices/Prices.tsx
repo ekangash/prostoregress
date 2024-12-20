@@ -1,12 +1,17 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 import React from "react";
+
+/** 2 App - Components, Hooks */
 import {PriceCardFeature} from "@/components/widgets/price/card/featute/PriceCardFeature";
 import {PriceCard} from "@/components/widgets/price/card/PriceCard";
 import {PricesDialogReception} from "@/components/entities/prices/dialog/reception/PricesDialogReception";
 
-export const Prices: React.FC = () => {
+/** 3 Entities, Stores, Packages, Enums ... */
+
+/**
+ * @return {React.ReactElement} Сформированный DOM узел.
+ */
+export const Prices: React.FC = (): React.ReactElement => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -79,5 +84,5 @@ export const Prices: React.FC = () => {
                 </PriceCard>
             </PriceCardFeature>
         </div>
-    )
+    );
 }

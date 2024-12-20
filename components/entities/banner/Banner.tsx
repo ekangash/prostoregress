@@ -1,11 +1,12 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 import React from "react";
+import {Send, ExternalLink} from "lucide-react";
+
+/** 2 App - Components, Hooks */
 import {Video} from "@/components/shared/video/Video";
 import {Icon} from "@/components/shared/icon/Icon";
-import {Send} from "lucide-react";
-import {ExternalLink} from "lucide-react";
+
+/** 3 Entities, Stores, Packages, Enums ... */
 import {cn} from "@/packages/utils";
 
 interface BannerProps {
@@ -37,7 +38,7 @@ export const Banner: React.FC<BannerProps> = ({ className = '' }): React.ReactEl
                         </p>
                         <a
                             className="whitespace-nowrap dark:bg-secondary bg-secondary-foreground/70 hover:bg-secondary-foreground/90 duration-300 px-10 py-6 text-white rounded-2xl flex items-center cursor-pointer justify-center transition-all focus-visible:outline-none outline-none focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-1.5 font-medium"
-                            href="https://t.me/ekangash"
+                            href="https://t.me/alenkaproregress"
                             target="_blank"
                         >
                             <Icon path={Send} />
@@ -49,34 +50,4 @@ export const Banner: React.FC<BannerProps> = ({ className = '' }): React.ReactEl
             </div>
         </div>
     );
-
-    return (
-        <Video
-            as="section"
-            className={cn('aspect-w-16 aspect-h-5 h-xs', className)}
-            rounded="3xl"
-            src="/video/exploding-ink-underwater.mp4"
-        >
-            <div className="flex justify-center items-center p-4">
-                <div className="flex flex-col items-center space-y-2 w-full text-center max-w-sm">
-                    <h2 className="text-2xl md:text-5xl font-extrabold text-white">
-                        Сеансы регрессивного гипноза
-                    </h2>
-                    <p className="text-white text-sm rounded-md px-3 py-0.5">
-                        Как вам идея, освоить техники работы с подсознанием
-                        и добиваться в жизни всего, чего захочешь.
-                    </p>
-                    <a
-                        className="whitespace-nowrap dark:bg-secondary bg-secondary-foreground/70 hover:bg-secondary-foreground/90 duration-300 px-10 py-6 text-white rounded-2xl flex items-center cursor-pointer justify-center transition-all focus-visible:outline-none outline-none focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-1.5 font-medium"
-                        href="https://t.me/ekangash"
-                        target="_blank"
-                    >
-                        <Icon path={Send} />
-                        Записаться через Telegram
-                        <Icon path={ExternalLink} size={4} />
-                    </a>
-                </div>
-            </div>
-        </Video>
-    )
 }

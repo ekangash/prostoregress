@@ -1,17 +1,18 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
+import React from 'react';
+
 /** 2 App - Components, Hooks */
+import {AppLayoutHeader} from "@/components/app/layout/header/AppLayoutHeader";
+import {AppLayoutFooter} from "@/components/app/layout/footer/AppLayoutFooter";
+
 /** 3 Entities, Stores, Packages, Enums ... */
-import React from 'react'
-import {AppLayoutHeader} from "./header/AppLayoutHeader";
-import {AppLayoutFooter} from "./footer/AppLayoutFooter";
 
 interface AppLayoutLayoutProps {
   children: React.ReactNode;
 }
 
 /**
- *
- * @constructor
+ * @return {React.ReactElement} Сформированный DOM узел.
  */
 export const AppLayout: React.FC<AppLayoutLayoutProps> = ({ children }) => {
 

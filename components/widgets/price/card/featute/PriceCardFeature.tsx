@@ -1,16 +1,24 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 import React from "react";
-import {Icon} from "@/components/shared/icon/Icon";
 import {Rocket} from "lucide-react";
+
+/** 2 App - Components, Hooks */
+import {Icon} from "@/components/shared/icon/Icon";
+
+/** 3 Entities, Stores, Packages, Enums ... */
 
 interface CastCardFeatureProps {
     badge?: string;
     children: React.ReactNode;
 }
 
-export const PriceCardFeature: React.FC<CastCardFeatureProps> = ({ badge = 'Популярный', children }) => {
+/**
+ * @returns {React.ReactElement} Сформированный DOM узел.
+ */
+export const PriceCardFeature: React.FC<CastCardFeatureProps> = ({
+    badge = 'Популярный',
+    children
+}): React.ReactElement => {
 
     return (
         <div className="flex flex-col items-center light:bg-gradient-to-br from-secondary via-orange-100 to-purple-100 dark:bg-secondary rounded-3xl shadow-sm relative border-4 border-orange-200 max-w-sm">
@@ -20,5 +28,5 @@ export const PriceCardFeature: React.FC<CastCardFeatureProps> = ({ badge = 'По
             </p>
             {children}
         </div>
-    )
+    );
 }

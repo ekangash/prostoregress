@@ -1,7 +1,8 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
+import React from "react";
+
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import React from "react";
 
 const TASKS_ALERTS = [
     {
@@ -35,7 +36,10 @@ const TASKS_ALERTS = [
 
 ]
 
-export const Tasks: React.FC = () => {
+/**
+ * @return {React.ReactElement} Сформированный DOM узел.
+ */
+export const Tasks: React.FC = (): React.ReactElement => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -46,5 +50,5 @@ export const Tasks: React.FC = () => {
                 </div>
             ))}
         </div>
-    )
+    );
 }

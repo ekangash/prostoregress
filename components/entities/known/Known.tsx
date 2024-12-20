@@ -1,7 +1,8 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
+import React from "react";
+
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import React from "react";
 
 const KNOWN_ALERTS = [
     'Не идут деньги',
@@ -16,7 +17,10 @@ const KNOWN_ALERTS = [
     'Почему моя жизнь совсем не такая, как хотелось'
 ]
 
-export const Known: React.FC = () => {
+/**
+ * @return {React.ReactElement} Сформированный DOM узел.
+ */
+export const Known: React.FC = (): React.ReactElement => {
 
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -26,5 +30,5 @@ export const Known: React.FC = () => {
                 </div>
             ))}
         </div>
-    )
+    );
 }

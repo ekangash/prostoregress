@@ -1,9 +1,11 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 import React from "react";
 import {ScrollingCarousel} from "@trendyol-js/react-carousel";
+
+/** 2 App - Components, Hooks */
 import {Image} from "@/components/shared/image/Image";
+
+/** 3 Entities, Stores, Packages, Enums ... */
 
 const howwoks = [
     {
@@ -26,7 +28,7 @@ const howwoks = [
 /**
  * @return {React.ReactElement} Сформированный DOM узел.
  */
-export const HowItWork: React.FC = () => {
+export const HowItWork: React.FC = (): React.ReactElement => {
 
     return (
         <div className="flex w-full flex-col justify-center gap-4 sm:flex-row">

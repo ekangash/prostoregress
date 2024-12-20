@@ -1,8 +1,10 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 import React from "react";
+
+/** 2 App - Components, Hooks */
 import {PriceCardValue} from "@/components/widgets/price/card/value/PriceCardValue";
+
+/** 3 Entities, Stores, Packages, Enums ... */
 
 interface CastCardProps {
     title: string;
@@ -12,14 +14,9 @@ interface CastCardProps {
 }
 
 /**
- * @param title
- * @param cast
- * @param values
- * @param children
- *
- * @constructor
+ * @returns {React.ReactElement} Сформированный DOM узел.
  */
-export const PriceCard: React.FC<CastCardProps> = ({ title, cast, values, children }) => {
+export const PriceCard: React.FC<CastCardProps> = ({ title, cast, values, children }): React.ReactElement => {
 
     return (
         <div className="flex flex-col items-center border-2 border-secondary p-8 rounded-3xl shadow-sm max-w-sm">
@@ -48,5 +45,5 @@ export const PriceCard: React.FC<CastCardProps> = ({ title, cast, values, childr
                 </div>
             </div>
         </div>
-    )
+    );
 }

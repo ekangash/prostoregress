@@ -1,16 +1,12 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
+import {AxiosError} from "axios";
 import {toast} from "sonner";
 
+/** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
 import {inst} from "@/packages/support";
 import {REQUEST_STATUSES} from "@/enums/request/statuses";
 import {REQUEST_MESSAGES} from "@/enums/request/messages";
-import {AxiosError} from "axios";
-
-/** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 
 /**
  * Вспомогательные методы для обработки ошибок

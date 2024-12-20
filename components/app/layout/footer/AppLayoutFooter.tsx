@@ -1,5 +1,6 @@
-import React from 'react'
 /** 1 Node - Modules, Components, Hooks, Icons */
+import React from 'react';
+
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
 
@@ -8,10 +9,9 @@ interface AppLayoutFooterProps {
 }
 
 /**
- *
- * @constructor
+ * @return {React.ReactElement} Сформированный DOM узел.
  */
-export const AppLayoutFooter: React.FC<AppLayoutFooterProps> = ({ className }) => {
+export const AppLayoutFooter: React.FC<AppLayoutFooterProps> = ({ className }): React.ReactElement => {
 
   return (
       <footer className={className}>

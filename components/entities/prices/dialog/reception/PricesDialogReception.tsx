@@ -1,14 +1,17 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 import React from "react";
 import {toast} from "sonner";
-import {obj} from "@/packages/support";
+
+/** 2 App - Components, Hooks */
 import {Dialog} from "@/components/shared/dialog/Dialog";
 import {Button} from "@/components/shared/button/Button";
 import {Form} from "@/components/shared/form/Form";
-import {yupSupport} from "@/packages/yup/support";
+
+/** 3 Entities, Stores, Packages, Enums ... */
 import {yup} from "@/packages/yup";
+import {obj} from "@/packages/support";
+import {yupSupport} from "@/packages/yup/support";
+
 
 /**
  * @interface CastsButtonsReceptionProps
@@ -19,11 +22,7 @@ interface CastsButtonsReceptionProps {
 }
 
 /**
- *
- * @param title
- * @param cast
- *
- * @constructor
+ * @return {React.ReactElement} Сформированный DOM узел.
  */
 export const PricesDialogReception: React.FC<CastsButtonsReceptionProps> = ({ title, cast }): React.ReactElement => {
     /**
@@ -146,5 +145,5 @@ export const PricesDialogReception: React.FC<CastsButtonsReceptionProps> = ({ ti
                 </Dialog.Main>
             </Dialog.Content>
         </Dialog>
-    )
+    );
 }

@@ -1,17 +1,22 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-/** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
 import React from "react";
+
+/** 2 App - Components, Hooks */
 import {Video} from "@/components/shared/video/Video";
 import {Image} from "@/components/shared/image/Image";
 import {Button} from "@/components/shared/button/Button";
+
+/** 3 Entities, Stores, Packages, Enums ... */
 import {cn} from "@/packages/utils";
 
 interface PersonalProps {
     className?: string;
 }
 
-export const Personal: React.FC<PersonalProps> = ({ className }) => {
+/**
+ * @return {React.ReactElement} Сформированный DOM узел.
+ */
+export const Personal: React.FC<PersonalProps> = ({ className }): React.ReactElement => {
 
     return (
         <>

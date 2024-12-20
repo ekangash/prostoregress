@@ -1,23 +1,23 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
+import React, {useCallback} from 'react';
 /** 2 App - Components, Hooks */
-/** 3 Entities, Stores, Packages, Enums ... */
-import React from 'react'
 import {Button} from "@/components/shared/button/Button";
-import {cn} from "@/packages/utils";
-import {useScrollToAnchor} from "@/hooks/useScrollToAnchor";
-import {useCallback} from "react";
 import {AppLayoutLogo} from "@/components/app/layout/logo/AppLayoutLogo";
 import {AppThemeToggle} from "@/components/app/theme/toggle/AppThemeToggle";
+import {useScrollToAnchor} from "@/hooks/useScrollToAnchor";
+
+/** 3 Entities, Stores, Packages, Enums ... */
+import {cn} from "@/packages/utils";
+
 
 interface AppLayoutHeaderProps {
     className: string;
 }
 
 /**
- *
- * @constructor
+ * @return {React.ReactElement} Сформированный DOM узел.
  */
-export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }) => {
+export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): React.ReactElement => {
     const scrollToAnchor = useScrollToAnchor(100);
     const onScrollToCost = useCallback(() => scrollToAnchor(`#cast`), []);
     const onScrollToKnown = useCallback(() => scrollToAnchor(`#known`), []);

@@ -1,8 +1,8 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
+import { createContext, useContext, useEffect, useState, Context } from 'react';
+
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
-import { createContext, useContext, useEffect, useState } from "react"
-import {Context} from "react";
 
 type Theme = "dark" | "light" | "system"
 
