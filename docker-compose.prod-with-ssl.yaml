@@ -9,7 +9,7 @@ services:
       - "${DOCKER_PORT_PROD_HTTP}:80"
       - "${DOCKER_PORT_PROD_HTTPS}:443"
     volumes:
-      - ./docker/prod/nginx/default.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/prod/nginx/with-ssl.conf:/etc/nginx/nginx.conf:ro
       - ./docker/letsencrypt/certbot/conf:/etc/letsencrypt
       - ./docker/letsencrypt/certbot/www:/var/www/certbot
     # Перезапустит контейнер в непредвиденных ситуациях

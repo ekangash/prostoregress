@@ -8,7 +8,7 @@ import React from "react";
  * @param {any} initialValue
  * @param {array} deps
  *
- * @return {AppEntity|array|object|string|number}
+ * @return {array|object|string|number}
  */
 export function useConst<T = any>(initialValue: any, deps: any[] = []): T {
     const refValue = React.useRef();
