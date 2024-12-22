@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   prod-client:
-    container_name: prostoregress-prod
+    container_name: prostoregress-prod-client
     build:
       context: .
       dockerfile: docker/prod/Dockerfile
@@ -11,7 +11,7 @@ services:
       - prod
   prod-proxer:
     image: nginx:latest
-    container_name: prostoregress-prod-nginx
+    container_name: prostoregress-prod-proxer
     ports:
       - "${DOCKER_PORT_PROD_HTTP}:80"
       - "${DOCKER_PORT_PROD_HTTPS}:443"
