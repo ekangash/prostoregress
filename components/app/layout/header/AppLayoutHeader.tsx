@@ -8,6 +8,11 @@ import {useScrollToAnchor} from "@/hooks/useScrollToAnchor";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 import {cn} from "@/packages/utils";
+import {Icon} from "@/components/shared/icon/Icon";
+import {TrafficCone} from "lucide-react";
+import {Target} from "lucide-react";
+import {LayoutGrid} from "lucide-react";
+import {Gem} from "lucide-react";
 
 
 interface AppLayoutHeaderProps {
@@ -32,35 +37,53 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
                   onClick={onScrollToKnown}
                   variant="secondary"
               >
+                  <Icon
+                      path={TrafficCone}
+                      size={4}
+                  />
                   Зачем
               </Button>
               <Button
                   onClick={onScrollToTasks}
                   variant="secondary"
               >
+                  <Icon
+                      path={Target}
+                      size={4}
+                  />
                   Цели
               </Button>
               <Button
                   onClick={onScrollToMethods}
                   variant="secondary"
               >
+                  <Icon
+                      path={LayoutGrid}
+                      size={4}
+                  />
                   Методы
               </Button>
               <Button
                   onClick={onScrollToCost}
                   variant="secondary"
               >
+                  <Icon
+                      path={Gem}
+                      size={4}
+                  />
                   Стоимость
               </Button>
           </div>
           <div className="col-span-2 lg:col-span-1 order-3 flex space-x-2 justify-end items-center">
               <AppThemeToggle />
-              <p className="font-extrabold text-md">
-                  +7 (993) 926-03-18
-              </p>
-              <p className="text-sm text-minor opacity-60">
-                  /звоните
-              </p>
+              <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-2">
+                  <p className="font-extrabold text-sm lg:text-md">
+                      +7 (993) 926-03-18
+                  </p>
+                  <p className="text-xs text-minor opacity-60">
+                      /звоните
+                  </p>
+              </div>
           </div>
       </header>
   );

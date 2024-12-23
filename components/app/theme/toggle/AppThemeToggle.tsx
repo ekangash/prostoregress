@@ -22,6 +22,7 @@ export const AppThemeToggle: React.FC = (): React.ReactElement => {
               setTheme(theme === 'dark' ? 'light' : 'dark');
           }}
           size="square"
+          variant="secondary"
       >
           <Icon
               className="fill-violet-700 text-violet-700 block dark:hidden"

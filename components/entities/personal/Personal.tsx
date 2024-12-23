@@ -20,67 +20,60 @@ export const Personal: React.FC<PersonalProps> = ({ className }): React.ReactEle
 
     return (
         <>
+            <div className="flex lg:hidden flex-col items-center w-full text-center mb-8">
+                <h2 className="text-4xl sm:text-4xl font-extrabold text-white mb-3 max-w-xs">
+                    {/*Алёна Малькова*/}
+                    Сеансы краткосрочной терапии
+                </h2>
+                <div className="flex flex-col text-white text-sm bg-foreground/60 dark:bg-secondary/60 rounded-xl px-3 py-1.5 max-w-xs">
+                    <p>
+                        «Вы никогда не сумеете решить возникшую проблему, если сохраните мышление и тот же подход, который привел вас к этой проблеме»
+                    </p>
+                    <p className="ml-auto text-primary">
+                        Альберт Эйнштейн
+                    </p>
+                </div>
+            </div>
             <Video
                 as="section"
                 className={cn('aspect-w-16 aspect-h-5 h-xs mb-16', className)}
                 rounded="3xl"
                 src="/video/abstract-pattern-ink-abstract-blue-background-colors.mp4"
             >
-                <div className="flex flex-col lg:flex-row items-center p-4">
-                    <div className="flex flex-col items-center space-y-1 w-full text-center">
-                        <h2 className="text-4xl sm:text-5xl font-extrabold text-white">
-                            Алёна Малькова
-                        </h2>
-                        <p className="text-white text-sm bg-foreground/80 dark:bg-secondary rounded-md px-3 py-0.5">
-                            Любую проблему можно решить, помните об этом!
-                        </p>
-                    </div>
+                <div className="flex flex-col-reverse lg:flex-row items-center p-4 gap-2">
                     <div className="flex justify-center items-end w-full h-full relative">
                         <Image
-                            className="h-80 lg:h-96 -mb-4"
+                            className="h-xs -mb-4"
                             src="/img/girl.png"
                         />
-                        <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" className="absolute left-10 top-52 floating-4 aos-init aos-animate">
-                            <Button
-                                variant="transparent"
-                                text="sm"
-                            >
-                                Классический гипноз
-                            </Button>
+                        <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" className="absolute left-10 bottom-24 floating-4 aos-init aos-animate">
+                            <p className="text-sm text-white/90 dark:bg-secondary/60 bg-secondary-foreground/70 px-3 py-1.5 rounded-lg">
+                                Регрессивная гипнотерапия с участием слипера/контактера
+                            </p>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" className="absolute top-32 right-16 floating aos-init aos-animate">
-                            <Button
-                                variant="transparent"
-                                text="sm"
-                            >
-                                Экзорегресс
-                            </Button>
-                        </div>
-
-                        <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" className="absolute bottom-28 right-8 floating aos-init aos-animate">
-                            <Button
-                                variant="transparent"
-                                text="sm"
-                            >
-                                НЛП
-                            </Button>
-                        </div>
-
                         <div data-aos="fade-up" data-aos-delay="500" data-aos-once="true" className="absolute left-10 floating aos-init aos-animate">
-                            <Button
-                                variant="transparent"
-                                text="sm"
-                            >
-                                Регрессивный гипноз
-                            </Button>
+                            <p className="text-sm text-white/90 dark:bg-secondary/60 bg-secondary-foreground/70 px-3 py-1.5 rounded-lg">
+                                НЛП Техника
+                            </p>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="600" data-aos-once="true" className="absolute bottom-10 right-8 floating-4 aos-init aos-animate">
-                            <Button
-                                variant="transparent"
-                                text="sm"
-                            >
-                                Самогипноз
-                            </Button>
+                            <p className="text-sm text-white/90 dark:bg-secondary/60 bg-secondary-foreground/70 px-3 py-1.5 rounded-lg">
+                                Регрессивная гипнотерапия
+                            </p>
+                        </div>
+                    </div>
+                    <div className="hidden lg:flex flex-col items-center w-full text-center">
+                        <h2 className="text-4xl sm:text-4xl font-extrabold text-white mb-3 max-w-xs">
+                            {/*Алёна Малькова*/}
+                            Сеансы краткосрочной терапии
+                        </h2>
+                        <div className="flex flex-col text-white text-sm bg-foreground/60 dark:bg-secondary/60 rounded-xl px-3 py-1.5 max-w-xs">
+                            <p>
+                                «Вы никогда не сумеете решить возникшую проблему, если сохраните мышление и тот же подход, который привел вас к этой проблеме»
+                            </p>
+                            <p className="ml-auto text-primary">
+                                Альберт Эйнштейн
+                            </p>
                         </div>
                     </div>
                 </div>

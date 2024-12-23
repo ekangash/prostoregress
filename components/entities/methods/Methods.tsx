@@ -17,7 +17,7 @@ export const Methods: React.FC = () => {
             <div className="flex flex-col lg:flex-row items-center col-span-4 gap-4 p-4 bg-secondary rounded-3xl">
                 <Image
                     rounded="3xl"
-                    className="relative aspect-w-16 aspect-h-4 h-full w-xs"
+                    className="relative aspect-w-16 aspect-h-4 h-full w-full"
                     src="/img/why-chose-us-thumb.png"
                 >
                     <div className="flex items-center justify-center p-4 bg-black/40 rounded-3xl">

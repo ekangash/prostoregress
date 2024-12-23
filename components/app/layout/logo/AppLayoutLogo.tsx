@@ -21,7 +21,7 @@ export const AppLayoutLogo: React.FC = (): React.ReactElement => {
             size="none"
             variant="none"
         >
-            <p className="text-md p-1 bg-primary rounded-md text-white leading-none">
+            <p className="text-md p-1 bg-primary text-black rounded-md leading-none font-extrabold">
                 PRO
             </p>
             <p className="text-primary font-extrabold text-3xl leading-none">
