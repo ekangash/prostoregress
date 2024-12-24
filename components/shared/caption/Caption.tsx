@@ -24,12 +24,12 @@ export const Caption: React.FC<CaptionProps> = ({
 }): React.ReactElement => {
 
     return (
-        <div className={cn('max-w-md mx-auto', className)}>
+        <div className={cn('max-w-sm mx-auto', className)}>
             <h2 className="text-4xl text-center font-bold flex justify-center items-center gap-2">
                 {children}
             </h2>
             {description && (
-                <p className="mt-2 text-sm   text-center opacity-80">
+                <p className="mt-2 text-sm text-center opacity-80">
                     {description}
                 </p>
             )}
