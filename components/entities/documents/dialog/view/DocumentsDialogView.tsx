@@ -45,9 +45,6 @@ export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ titl
                             {title}
                         </p>
                     </Dialog.Title>
-                    <Dialog.Description asChild={true}>
-
-                    </Dialog.Description>
                 </Dialog.Header>
                 <Dialog.Main className="pb-5">
                     <Image

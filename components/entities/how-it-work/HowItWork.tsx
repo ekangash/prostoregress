@@ -33,39 +33,29 @@ export const HowItWork: React.FC = (): React.ReactElement => {
 
     return (
         <div className="flex w-full flex-col justify-center space-y-4">
-            <ScrollingCarousel
-                leftIcon={(
-                    <Icon
-                        path={ChevronsLeft}
-                        size={6}
-                    />
-                )}
-                rightIcon={(
-                    <Icon
-                        path={ChevronsRight}
-                        size={6}
-                    />
-                )}
-            >
-                {howwoks.map((data, index: number): React.ReactElement => (
-                    <div
-                        key={index}
-                        className="flex w-[550px] w-full items-center gap-5 rounded-3xl bg-secondary px-8 py-4 sm:justify-center select-none"
-                    >
-                        <Icon
-                            path={data.icon}
-                            size={10}
-                        />
-                        <div className="flex flex-1 flex-col space-y-1">
-                            <div className="text-base font-semibold lg:text-xl">
-                                {data.title}
-                            </div>
-                            <div className="text-sm font-normal normal-case leading-4 opacity-80">
-                                {data.desc}
+            <ScrollingCarousel>
+                <div className="flex space-x-5">
+                    {howwoks.map((data, index: number): React.ReactElement => (
+                        <div
+                            key={index}
+                            className="flex w-[550px] w-full items-center gap-5 rounded-3xl bg-secondary px-8 py-4 sm:justify-center select-none"
+                        >
+                            <Icon
+                                path={data.icon}
+                                size={10}
+                            />
+                            <div className="flex flex-1 flex-col space-y-1">
+                                <div className="text-base font-semibold lg:text-xl">
+                                    {data.title}
+                                </div>
+                                <div className="text-sm font-normal normal-case leading-4 opacity-80">
+                                    {data.desc}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <></>
             </ScrollingCarousel>
             <p className="items-center justify-center transition-all text-lg rounded-lg straight text-minor font-bold hidden lg:flex gap-0.5">
                 <Icon
