@@ -1,7 +1,7 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from "react";
 import {ScrollingCarousel} from "@trendyol-js/react-carousel";
-import {Settings, CalendarHeart, Headset, ChevronsLeft, ChevronsRight} from "lucide-react";
+import {Rocket, CalendarHeart, Headset} from "lucide-react";
 
 /** 2 App - Components, Hooks */
 import {Icon} from "@/components/shared/icon/Icon";
@@ -11,18 +11,18 @@ import {Icon} from "@/components/shared/icon/Icon";
 const howwoks = [
     {
         icon: CalendarHeart,
-        title: "Подбор удобного времени",
-        desc: "После оформления заявки мы подберем удобное для вас время и подготавливаемся к интересному путешествию. ",
+        title: "Подбор удобного времени собеседования",
+        desc: "Перед сеансом, мы познакомимся с вами, и с вашим запросом. Определим Аспекты (вопросы), которые будем решать в сеансе. Я расскажу вам все этапы сеанса.",
     },
     {
-        icon: Settings,
-        title: "Настройка гарнитура для связи",
-        desc: "Опционе...",
+        icon: Rocket,
+        title: "Тест на гипнабиьность",
+        desc: "Тест нужно проходить в наушниках и с маской для глаз маску можно заменить полотенцем на глаза).",
     },
     {
         icon: Headset,
-        title: "Проведение сеанса",
-        desc: "Описание...",
+        title: "Обязательное оборудование к сеансу",
+        desc: "Маска для глаз. Компьютер. Наушники с выносным микрофоном. Установленная на компьютер бесплатная программа для видеозвонков  Skype.",
     },
 ];
 
@@ -38,7 +38,7 @@ export const HowItWork: React.FC = (): React.ReactElement => {
                     {howwoks.map((data, index: number): React.ReactElement => (
                         <div
                             key={index}
-                            className="flex w-[550px] w-full items-center gap-5 rounded-3xl bg-secondary px-8 py-4 sm:justify-center select-none"
+                            className="flex max-w-[550px] w-full items-center gap-5 rounded-3xl bg-secondary px-8 py-4 sm:justify-center select-none"
                         >
                             <Icon
                                 path={data.icon}
@@ -57,17 +57,6 @@ export const HowItWork: React.FC = (): React.ReactElement => {
                 </div>
                 <></>
             </ScrollingCarousel>
-            <p className="items-center justify-center transition-all text-lg rounded-lg straight text-minor font-bold hidden lg:flex gap-0.5">
-                <Icon
-                    path={ChevronsLeft}
-                    size={6}
-                />
-                Двигайте элементы
-                <Icon
-                    path={ChevronsRight}
-                    size={6}
-                />
-            </p>
         </div>
     )
 }

@@ -7,7 +7,6 @@ import {cn} from "@/packages/utils";
 import {obj, str} from "@/packages/support";
 import {useFormContext as useFormOtherContext} from "@/components/shared/form/context/FormContext";
 import {yupSupport} from "@/packages/yup/support";
-import * as stream from "stream";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 
@@ -46,9 +45,9 @@ export const FormCheckbox: React.FC<FormCheckboxProps> = ({
             <label
                 className={cn({
                     ['hover:bg-secondary text-gray-800 hover:opacity-100 ease-in-out px-2 py-1.5']: standard,
-                    ['bg-secondary hover:bg-gray-200 text-gray-800 ease-in-out px-2 py-1.5']: filled,
+                    ['bg-secondary hover:bg-secondary-hoverable ease-in-out px-2 py-1.5']: filled,
                     ['cursor-pointer']: !disabled.includes(name),
-                }, 'flex space-x-1.5 transition-colors duration-300 rounded-lg items-start')}
+                }, 'flex space-x-1.5 transition-colors duration-300 rounded-lg items-start text-foreground')}
                 htmlFor={name}
             >
                 {type === 'checkbox' && (
@@ -86,7 +85,7 @@ export const FormCheckbox: React.FC<FormCheckboxProps> = ({
                        <div
                            className={cn({
                                "after:ml-0.5 after:text-red-500 after:content-['*'] flex": yupSupport.attributeIsRequired(name, schema)
-                           }, 'flex text-sm font-medium text-gray-800')}
+                           }, 'flex text-sm font-medium text-foreground')}
                        >
                            {label}
                        </div>

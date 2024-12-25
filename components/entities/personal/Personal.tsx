@@ -19,6 +19,7 @@ export const Personal: React.FC<PersonalProps> = ({ className }): React.ReactEle
 
     return (
         <>
+            {/*bg-gradient-to-br from-pink-400 to-orange-400 hover:bg-gradient-to-bl*/}
             <div className="flex lg:hidden flex-col items-center w-full text-center mb-8">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-background-foreground mb-3">
                     Сеансы краткосрочной терапии
@@ -32,12 +33,7 @@ export const Personal: React.FC<PersonalProps> = ({ className }): React.ReactEle
                     </p>
                 </div>
             </div>
-            <Video
-                as="section"
-                className={cn('aspect-w-16 aspect-h-5 h-80 lg:h-xs mb-16', className)}
-                rounded="3xl"
-                src="/video/water-ink-paint-abstract-blue-underwater-motion.webm"
-            >
+            <div className="aspect-w-16 aspect-h-5 h-80 lg:h-xs mb-16 rounded-3xl duration-300 transition-colors bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l">
                 <div className="flex flex-col-reverse lg:flex-row items-center p-4 gap-2">
                     <div className="flex justify-center items-end w-full h-full relative">
                         <Image
@@ -62,7 +58,7 @@ export const Personal: React.FC<PersonalProps> = ({ className }): React.ReactEle
                     </div>
                     <div className="hidden lg:flex flex-col items-center w-full text-center">
                         <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-3 max-w-xs">
-                            Сеансы краткосрочной терапии
+                            Сеансы регрессивного гипноза
                         </h2>
                         <div className="flex flex-col text-white text-sm bg-foreground/60 dark:bg-secondary/60 rounded-xl px-3 py-1.5 max-w-xs">
                             <p>
@@ -74,7 +70,7 @@ export const Personal: React.FC<PersonalProps> = ({ className }): React.ReactEle
                         </div>
                     </div>
                 </div>
-            </Video>
+            </div>
         </>
     );
 }

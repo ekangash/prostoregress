@@ -8,4 +8,4 @@ services:
     volumes:
       - .:/var/www/app
     ports:
-      - ${DOCKER_PORT_DEV}:3030
+      - ${DOCKER_PORT_DEV}:5173

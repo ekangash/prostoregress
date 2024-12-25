@@ -8,6 +8,7 @@ import {PriceCardValue} from "@/components/widgets/price/card/value/PriceCardVal
 
 interface CastCardProps {
     title: string;
+    description: string;
     cast: string;
     values: string[];
     children: ({ title, cast }: { title: string, cast: string}) =>  React.ReactNode;
@@ -16,17 +17,17 @@ interface CastCardProps {
 /**
  * @returns {React.ReactElement} Сформированный DOM узел.
  */
-export const PriceCard: React.FC<CastCardProps> = ({ title, cast, values, children }): React.ReactElement => {
+export const PriceCard: React.FC<CastCardProps> = ({ title, description, cast, values, children }): React.ReactElement => {
 
     return (
-        <div className="flex flex-col items-center border-2 border-secondary p-8 rounded-3xl shadow-sm max-w-sm">
+        <div className="flex flex-col items-center border-2 border-secondary p-8 rounded-3xl shadow-sm max-w-sm h-full">
             <div>
-                <h2 className="font-extrabold text-3xl text-center mb-2">{title}</h2>
-                <p className="opacity-60 text-center">
-                    Для индивидуальных пользователей
+                <h2 className="font-extrabold text-2xl text-center mb-2">{title}</h2>
+                <p className="text-minor text-center">
+                    {description}
                 </p>
                 <div className="flex flex-col text-minor items-center my-8">
-                    <p className="font-extrabold text-4xl">
+                    <p className="font-extrabold text-4xl text-pink-500">
                         {cast}
                     </p>
                     <p className="text-sm opacity-60">

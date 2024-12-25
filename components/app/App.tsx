@@ -33,7 +33,7 @@ export const App: React.FC = (): React.ReactElement => {
                     className="mb-16"
                 >
                     <Caption
-                        description="Описание..."
+                        description="Если что-то из нижеперечисленного вам знакомо и вызывает у вас чувство проживания и беспокойства , то это повод обратиться к нам за помощью."
                         className="mb-8"
                     >
                         Вам знакомо это?
@@ -57,7 +57,7 @@ export const App: React.FC = (): React.ReactElement => {
                     className="mb-16"
                 >
                     <Caption
-                        description="Описание..."
+                        description="В своей работе я применяю методы краткосрочной терапии, которые доказали свою эффективность на практике во всем мире."
                         className="mb-8"
                     >
                         Методы моей психологической практики

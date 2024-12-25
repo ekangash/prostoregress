@@ -127,6 +127,7 @@ export const PricesDialogReception: React.FC<CastsButtonsReceptionProps> = ({ ti
                                         name="privacy"
                                         className="w-full"
                                         withLabel
+                                        filled
                                     />
                                 </div>
                                 <Button

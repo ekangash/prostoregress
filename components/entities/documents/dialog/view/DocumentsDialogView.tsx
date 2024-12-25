@@ -1,16 +1,11 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from "react";
-import {toast} from "sonner";
 
 /** 2 App - Components, Hooks */
 import {Dialog} from "@/components/shared/dialog/Dialog";
 import {Button} from "@/components/shared/button/Button";
-import {Form} from "@/components/shared/form/Form";
 
 /** 3 Entities, Stores, Packages, Enums ... */
-import {yup} from "@/packages/yup";
-import {obj} from "@/packages/support";
-import {yupSupport} from "@/packages/yup/support";
 import {Image} from "@/components/shared/image/Image";
 
 
@@ -21,12 +16,13 @@ interface CastsButtonsReceptionProps {
     title: string;
     description: string;
     cover: string;
+    preview: string;
 }
 
 /**
  * @return {React.ReactElement} Сформированный DOM узел.
  */
-export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ title,description, cover }): React.ReactElement => {
+export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ title,description, preview, cover }): React.ReactElement => {
 
     return (
         <Dialog>
@@ -55,8 +51,11 @@ export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ titl
                         height={230}
                         rounded="2xl"
                     />
-                    <p className="text-left text-md font-normal text-minor transition-all">
+                    <p className="text-left text-sm font-normal text-minor transition-all mb-2">
                         {description}
+                    </p>
+                    <p className="text-left text-md font-normal transition-all">
+                        {preview}
                     </p>
                 </Dialog.Main>
             </Dialog.Content>

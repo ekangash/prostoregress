@@ -19,25 +19,19 @@ interface BannerProps {
 export const Banner: React.FC<BannerProps> = ({ className = '' }): React.ReactElement => {
 
     return (
-        <div className={cn('flex w-full flex-col items-center justify-center gap-5 rounded-3xl lg:flex-row bg-secondary md:items-center p-5 lg:gap-10 xl:gap-20', className)}>
-            <Video
-                as="div"
-                className="aspect-w-16 aspect-h-4 h-40 max-w-xs w-full"
-                rounded="3xl"
-                src="/video/girl-meditating-in-yoga-pose-at-sunset.mp4"
-            />
-            <div className="flex w-full flex-col gap-5 text-start max-w-xs lg:gap-10">
+        <div className={cn('flex w-full flex-col items-center justify-center gap-5 lg:flex-row md:items-center   lg:gap-10 xl:gap-20', className)}>
+            <div className="flex w-full flex-col gap-5 text-start max-w-xl lg:gap-10">
                 <div className="flex justify-center items-center">
-                    <div className="flex flex-col items-center space-y-2 w-full text-center max-w-sm">
-                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
+                    <div className="flex flex-col items-center w-full text-center max-w-md">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">
                             Сеансы регрессивного гипноза
                         </h2>
-                        <p className="text-sm rounded-md px-3 py-0.5">
+                        <p className="text-sm rounded-md px-3 py-0.5 mt-3 text-minor">
                             Как вам идея, освоить техники работы с подсознанием
                             и добиваться в жизни всего, чего захочешь.
                         </p>
                         <a
-                            className="whitespace-nowrap dark:bg-secondary bg-secondary-foreground/70 hover:bg-secondary-foreground/90 duration-300 px-10 py-6 text-white rounded-2xl flex items-center cursor-pointer justify-center transition-all focus-visible:outline-none outline-none focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-1.5 font-medium"
+                            className="mt-6 whitespace-nowrap dark:bg-secondary bg-secondary-foreground/70 hover:bg-secondary-foreground/90 duration-300 px-10 py-6 text-white rounded-2xl flex items-center cursor-pointer justify-center transition-all focus-visible:outline-none outline-none focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-1.5 font-medium"
                             href="https://t.me/alenkaproregress"
                             target="_blank"
                         >
