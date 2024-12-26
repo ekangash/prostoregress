@@ -16,6 +16,7 @@ import {ThemeProvider} from "@/components/app/theme/provider/AppThemeProvider";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 import "@/components/app/App.css"
+import {FrequentlyAskedQuestions} from "@/components/entities/faq/FrequentlyAskedQuestions";
 
 /**
  * @return {React.ReactElement} Сформированный DOM узел.
@@ -89,6 +90,7 @@ export const App: React.FC = (): React.ReactElement => {
                     <Prices />
                 </section>
                 <Banner className="mb-16" />
+                <FrequentlyAskedQuestions className="mb-16" />
                 <AppToaster />
             </AppLayout>
         </ThemeProvider>

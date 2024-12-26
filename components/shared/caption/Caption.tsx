@@ -25,7 +25,7 @@ export const Caption: React.FC<CaptionProps> = ({
 
     return (
         <div className={cn('max-w-sm mx-auto', className)}>
-            <h2 className="text-4xl text-center font-bold flex justify-center items-center gap-2">
+            <h2 className="text-4xl text-center font-bold flex justify-center items-center gap-2 text-transparent bg-gradient-to-tr bg-clip-text from-blue-500 via-pink-500 to-red-500 dark:from-sky-300 dark:via-pink-300 dark:to-red-500">
                 {children}
             </h2>
             {description && (

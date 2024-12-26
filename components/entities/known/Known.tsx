@@ -27,7 +27,7 @@ export const Known: React.FC = (): React.ReactElement => {
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {KNOWN_ALERTS.map((alert, index): React.ReactElement => (
-                <div key={index} className="flex items-center justify-center text-md border border-secondary rounded-xl p-3">
+                <div key={index} className="flex items-center justify-center text-center text-md bg-secondary rounded-xl p-3">
                     {alert}
                 </div>
             ))}
