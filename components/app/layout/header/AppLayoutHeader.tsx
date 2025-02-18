@@ -1,3 +1,4 @@
+'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React, {useCallback} from 'react';
 /** 2 App - Components, Hooks */
@@ -31,10 +32,12 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
 
   return (
       <header className={cn('grid grid-cols-3 gap-1', className)}>
-          <AppLayoutLogo />
-          <div className="col-span-3 lg:col-span-1 order-last lg:order-2 flex items-center justify-center space-x-1">
+          <div className="col-span-2 lg:col-span-1 order-1 flex">
+              <AppLayoutLogo />
+          </div>
+          <div className="col-span-3 lg:col-span-1 order-last lg:order-2 flex items-center justify-center space-x-1 py-1">
               <Button
-                  onClick={onScrollToKnown}
+                  onClick={() => onScrollToKnown()}
                   variant="secondary"
               >
                   <Icon
@@ -44,7 +47,7 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
                   Зачем
               </Button>
               <Button
-                  onClick={onScrollToTasks}
+                  onClick={() => onScrollToTasks()}
                   variant="secondary"
               >
                   <Icon
@@ -54,7 +57,7 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
                   Цели
               </Button>
               <Button
-                  onClick={onScrollToMethods}
+                  onClick={() => onScrollToMethods()}
                   variant="secondary"
               >
                   <Icon
@@ -64,7 +67,7 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
                   Методы
               </Button>
               <Button
-                  onClick={onScrollToCost}
+                  onClick={() => onScrollToCost()}
                   variant="secondary"
               >
                   <Icon
@@ -74,7 +77,7 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
                   Стоимость
               </Button>
           </div>
-          <div className="col-span-2 lg:col-span-1 order-3 flex space-x-2 justify-end items-center">
+          <div className="col-span-1 order-3 flex space-x-2 justify-end items-center">
               <AppThemeToggle />
               <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-2">
                   <p className="font-extrabold text-sm lg:text-md">

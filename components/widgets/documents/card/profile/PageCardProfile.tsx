@@ -7,7 +7,7 @@ import {Button} from "@/components/shared/button/Button";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 import {Page} from "@/entities/notepad/Page";
-import {str} from "@/packages/support";
+import {str} from "data-support";
 import {type Profile} from "@/entities/account/Profile";
 
 /**

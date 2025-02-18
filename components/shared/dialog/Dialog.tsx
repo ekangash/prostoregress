@@ -9,7 +9,7 @@ import {DialogContent} from "@/components/shared/dialog/content/DialogContent";
 import {DialogOverlay} from "@/components/shared/dialog/overlay/DialogOverlay";
 import {DialogTitle} from "@/components/shared/dialog/title/DialogTitle";
 import {DialogDescription} from "@/components/shared/dialog/description/DialogDescription";
-import {DialogMain, DialogMainFC} from "@/components/shared/dialog/main/DialogMain";
+import {DialogScroll, DialogScrollFC} from "@/components/shared/dialog/scroll/DialogScroll";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 
@@ -20,7 +20,7 @@ interface DialogComponent extends React.FC<DialogPrimitive.DialogProps> {
     Close: React.FC<DialogPrimitive.DialogCloseProps>;
     Content: React.FC<DialogPrimitive.DialogContentProps>;
     Header: DialogHeaderFC;
-    Main: DialogMainFC;
+    Scroll: DialogScrollFC;
     Footer: DialogFooterFC;
     Title: React.FC<DialogPrimitive.DialogTitleProps>;
     Description: React.FC<DialogPrimitive.DialogDescriptionProps>;
@@ -52,8 +52,8 @@ Dialog.Footer.displayName = DialogFooter.displayName;
 Dialog.Title = DialogTitle;
 Dialog.Title.displayName = DialogTitle.displayName;
 
-Dialog.Main = DialogMain
-Dialog.Main.displayName = DialogMain.displayName
+Dialog.Scroll = DialogScroll
+Dialog.Scroll.displayName = DialogScroll.displayName
 
 Dialog.Description = DialogDescription;
 Dialog.Description.displayName = DialogDescription.displayName;

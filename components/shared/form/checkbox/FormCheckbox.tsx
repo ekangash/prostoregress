@@ -1,10 +1,11 @@
+'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from 'react';
 import {useFormContext} from "react-hook-form";
 import {cn} from "@/packages/utils";
 
 /** 2 App - Components, Hooks */
-import {obj, str} from "@/packages/support";
+import {obj, str} from "data-support";
 import {useFormContext as useFormOtherContext} from "@/components/shared/form/context/FormContext";
 import {yupSupport} from "@/packages/yup/support";
 

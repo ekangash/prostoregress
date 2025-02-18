@@ -3,7 +3,6 @@ import React from "react";
 import {Send, ExternalLink} from "lucide-react";
 
 /** 2 App - Components, Hooks */
-import {Video} from "@/components/shared/video/Video";
 import {Icon} from "@/components/shared/icon/Icon";
 
 /** 3 Entities, Stores, Packages, Enums ... */

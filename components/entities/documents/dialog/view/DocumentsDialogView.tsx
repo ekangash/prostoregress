@@ -34,7 +34,7 @@ export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ titl
                     Читать подробнее
                 </Button>
             </Dialog.Trigger>
-            <Dialog.Content className="sm:max-w-sm">
+            <Dialog.Content className="sm:max-w-xl">
                 <Dialog.Header>
                     <Dialog.Title>
                         <p className="text-2xl font-bold link-title line-clamp-2">
@@ -42,22 +42,22 @@ export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ titl
                         </p>
                     </Dialog.Title>
                 </Dialog.Header>
-                <Dialog.Main className="pb-5">
+                <Dialog.Scroll className="pb-5">
                     <Image
-                        className="w-full aspect-h-7 aspect-w-16 mb-4"
+                        className="w-full aspect-16/9 mb-4"
                         src={cover}
                         alt={title}
                         width={450}
                         height={230}
                         rounded="2xl"
                     />
-                    <p className="text-left text-sm font-normal text-minor transition-all mb-2">
+                    <div className="text-left text-sm font-normal text-minor transition-all mb-2 text-minor">
                         {description}
-                    </p>
-                    <p className="text-left text-md font-normal transition-all">
+                    </div>
+                    <div className="text-left text-md font-normal transition-all">
                         {preview}
-                    </p>
-                </Dialog.Main>
+                    </div>
+                </Dialog.Scroll>
             </Dialog.Content>
         </Dialog>
     );

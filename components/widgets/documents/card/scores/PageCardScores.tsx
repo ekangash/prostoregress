@@ -5,7 +5,7 @@ import React from 'react';
 
 /** 3 Entities, Stores, Packages, Enums ... */
 import {Page} from "@/entities/notepad/Page";
-import {dts} from "@/packages/support";
+import {dts} from "data-support";
 
 /**
  * @interface ArticleCardChannelProps

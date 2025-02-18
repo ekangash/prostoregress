@@ -26,7 +26,7 @@ export const PriceCard: React.FC<CastCardProps> = ({ title, description, cast, v
 
     return (
         <div className="flex flex-col items-center border-2 border-secondary p-8 rounded-3xl shadow-sm max-w-sm h-full w-full">
-            <div>
+            <div className="flex-1">
                 <h2 className="font-extrabold text-md text-center mb-2">
                     {title}
                 </h2>
@@ -42,7 +42,7 @@ export const PriceCard: React.FC<CastCardProps> = ({ title, description, cast, v
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col justify-between h-full">
+            <div className="flex flex-col justify-between">
                 <Dialog>
                     <Dialog.Trigger asChild>
                         <Button
@@ -68,13 +68,13 @@ export const PriceCard: React.FC<CastCardProps> = ({ title, description, cast, v
                                 </div>
                             </Dialog.Description>
                         </Dialog.Header>
-                        <Dialog.Main className="py-5">
+                        <Dialog.Scroll className="py-5">
                             <div className="space-y-1">
                                 {values.map((value, index) => (
                                     <PriceCardValue key={index}>{value}</PriceCardValue>
                                 ))}
                             </div>
-                        </Dialog.Main>
+                        </Dialog.Scroll>
                     </Dialog.Content>
                 </Dialog>
                 <div className="flex justify-center mt-2">

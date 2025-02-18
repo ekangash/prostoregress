@@ -1,3 +1,4 @@
+'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from 'react';
 import {cn} from "@/packages/utils";
@@ -9,7 +10,7 @@ import {Icon} from "@/components/shared/icon/Icon";
 import {useFormContext as useFormOtherContext} from "@/components/shared/form/context/FormContext";
 
 /** 3 Entities, Stores, Packages, Enums ... */
-import {obj, str} from "@/packages/support";
+import {obj, str} from "data-support";
 
 /**
  * @interface FormTextProps

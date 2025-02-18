@@ -1,3 +1,4 @@
+'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from "react";
 import {toast} from "sonner";
@@ -9,7 +10,7 @@ import {Form} from "@/components/shared/form/Form";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 import {yup} from "@/packages/yup";
-import {obj} from "@/packages/support";
+import {obj} from "data-support";
 import {yupSupport} from "@/packages/yup/support";
 
 
@@ -71,7 +72,7 @@ export const PriceValueDialogDetails: React.FC<CastsButtonsReceptionProps> = ({ 
                         </div>
                     </Dialog.Description>
                 </Dialog.Header>
-                <Dialog.Main className="py-5">
+                <Dialog.Scroll className="py-5">
                     <Form
                         className="space-y-5"
                         defaultValues={{ title }}
@@ -143,7 +144,7 @@ export const PriceValueDialogDetails: React.FC<CastsButtonsReceptionProps> = ({ 
                             </>
                         )}
                     </Form>
-                </Dialog.Main>
+                </Dialog.Scroll>
             </Dialog.Content>
         </Dialog>
     );

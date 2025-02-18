@@ -1,6 +1,6 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from "react";
-import {ScrollingCarousel} from "@trendyol-js/react-carousel";
+// import {ScrollingCarousel} from "@trendyol-js/react-carousel";
 import {Rocket, CalendarHeart, Headset} from "lucide-react";
 
 /** 2 App - Components, Hooks */
@@ -33,7 +33,7 @@ export const HowItWork: React.FC = (): React.ReactElement => {
 
     return (
         <div className="flex w-full flex-col justify-center space-y-4">
-            <ScrollingCarousel>
+            {/*<ScrollingCarousel>*/}
                 <div className="flex space-x-5">
                     {howwoks.map((data, index: number): React.ReactElement => (
                         <div
@@ -56,7 +56,7 @@ export const HowItWork: React.FC = (): React.ReactElement => {
                     ))}
                 </div>
                 <></>
-            </ScrollingCarousel>
+            {/*</ScrollingCarousel>*/}
         </div>
     )
 }

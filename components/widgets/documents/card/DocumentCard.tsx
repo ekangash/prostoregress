@@ -45,7 +45,7 @@ export const DocumentCard: React.FC<ArticleCardProps> = memo<ArticleCardProps>((
             )}
         >
             <Image
-                className="w-full aspect-h-7 aspect-w-16"
+                className="aspect-16/9 h-auto"
                 src={cover}
                 alt={title}
                 width={450}

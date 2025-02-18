@@ -1,9 +1,10 @@
+'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from 'react';
 import {Toaster as ToasterSonner} from "sonner";
 
 /** 2 App - Components, Hooks */
-import {useTheme} from "@/components/app/theme/provider/AppThemeProvider";
+import {useTheme} from "next-themes";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 

@@ -1,3 +1,4 @@
+'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React from 'react';
 

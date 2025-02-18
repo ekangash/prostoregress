@@ -2,12 +2,17 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import NextLink from "next/link";
+import {Loader} from "lucide-react";
 
 /** 2 App - Components, Hooks */
+import {Icon, IconProps} from "@/components/shared/icon/Icon";
 import {AppExceptionHandler} from "@/components/app/exception/AppExceptionHandler";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 import { cn } from "@/packages/utils"
+import {obj, str} from "data-support";
+
 
 const buttonVariants = cva(
     `flex items-center cursor-pointer justify-center transition-all cursor-pointer 
@@ -15,7 +20,7 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                primary: "text-black shadow bg-pink-500 text-white hover:bg-pink-500/90",
+                primary: "text-white shadow bg-primary hover:bg-primary/90",
                 destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
                 outline: "border border-input border-gray-200 hover:border-gray-100 bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground",
                 secondary: "bg-secondary hover:bg-secondary-hoverable text-accent-foreground",
@@ -54,7 +59,6 @@ const buttonVariants = cva(
                 'md': 'rounded-md',
                 'lg': 'rounded-lg',
                 'xl': 'rounded-xl',
-                '2xl': 'rounded-2xl',
             }
         },
         defaultVariants: {
@@ -77,10 +81,11 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     disabled?: boolean;
     href?: string;
     target?: string;
+    icon?: IconProps;
 }
 
 /**
- * @returns {React.ReactElement} Сформированный DOM узел.
+ * @returns {React.ReactElement} Сформированные DOM узлы.
  */
 const Button: React.ForwardRefExoticComponent<ButtonProps> = React.forwardRef<HTMLButtonElement, ButtonProps>(({
    className,
@@ -93,14 +98,15 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = React.forwardRef<HT
    href = '',
    target = '',
    children,
+   icon = null,
    onClick = null,
    asWrap = 'button',
    asChild = false,
    loading = false,
    ...props
 }, ref) => {
-    let hrefIsDefined = href.length > 0 && href;
-    let Comp = asChild ? Slot : (hrefIsDefined ? asWrap : asWrap);
+    let hrefIsDefined = str.contains(href) && href;
+    let Comp = asChild ? Slot : (hrefIsDefined ? NextLink : asWrap);
 
     /**
      * Промежуточное событие 'onClick' кнопки.
@@ -124,10 +130,16 @@ const Button: React.ForwardRefExoticComponent<ButtonProps> = React.forwardRef<HT
             className={cn(buttonVariants({ variant, size, text, rounded, feature }), className)}
             ref={ref}
             {...Comp === 'button' && { disabled }}
+            onClick={onClick}
             {...(typeof onClick === 'function' && { onClick: onClickMiddleware })}
             {...(hrefIsDefined && { href, target })}
             {...props}
         >
+            {loading ? (
+                <Icon size={4} path={Loader} variant="spinner" />
+            ) : obj.isset(icon, 'path') && (
+                <Icon size={4} color="secondaryForeground" {...icon as IconProps} />
+            )}
             {children}
         </Comp>
     );

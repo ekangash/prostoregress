@@ -1,9 +1,8 @@
 /** 1 Node - Modules, Components, Hooks, Icons */
-import React, {useCallback} from 'react';
+import React from 'react';
 
 /** 2 App - Components, Hooks */
 import {Button} from "@/components/shared/button/Button";
-import {useScrollToAnchor} from '@/hooks/useScrollToAnchor';
 
 /** 3 Entities, Stores, Packages, Enums ... */
 
@@ -11,24 +10,18 @@ import {useScrollToAnchor} from '@/hooks/useScrollToAnchor';
  * @return {React.ReactElement} Сформированный DOM узел.
  */
 export const AppLayoutLogo: React.FC = (): React.ReactElement => {
-    const scrollToAnchor = useScrollToAnchor(10);
-    const onScrollToAnchor = useCallback(() => scrollToAnchor('#scroll-to-top'), []);
-
     return (
         <Button
-            onClick={onScrollToAnchor}
-            className="col-span-1 order-1 font-bold items-center justify-start h-9 gap-0"
+            href="/"
+            className="font-bold items-start justify-center flex-col gap-0 border-l-2 border-solid border-pink-500 pl-2 rounded-none group"
             size="none"
             variant="none"
         >
-            <p className="text-md p-1 bg-pink-500 text-white rounded-md leading-none font-extrabold">
-                PRO
+            <p className="text-pink-500 bg-gradient-to-tr bg-clip-text from-blue-500 via-pink-500 to-red-500 dark:from-sky-300 dark:via-pink-300 dark:to-red-500 font-extrabold group-hover:text-foreground duration-300 text-xs leading-none">
+                Оговорки подсознания
             </p>
-            <p className="text-pink-500 font-extrabold text-3xl leading-none">
-                .
-            </p>
-            <p className="link-title text-xl">
-                Regress
+            <p className="text-pink-500 font-extrabold group-hover:text-foreground duration-300 text-xs leading-none">
+                Мастерская регресса
             </p>
         </Button>
     );

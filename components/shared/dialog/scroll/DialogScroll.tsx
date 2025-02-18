@@ -7,17 +7,17 @@ import {Scroll} from "@/components/shared/scroll-area/Scroll";
 /** 3 Entities, Stores, Packages, Enums ... */
 import {cn} from "@/packages/utils";
 
-interface DialogMainProps {
+interface DialogScrollProps {
     children: React.ReactNode;
     className?: string;
 }
 
-export type DialogMainFC = React.FC<DialogMainProps>;
+export type DialogScrollFC = React.FC<DialogScrollProps>;
 
 /**
  * @returns {React.ReactElement} Сформированный DOM узел.
  */
-export const DialogMain: DialogMainFC = ({
+export const DialogScroll: DialogScrollFC = ({
    className,
    children
 }) => (
@@ -27,4 +27,4 @@ export const DialogMain: DialogMainFC = ({
     </Scroll.Area>
 );
 
-DialogMain.displayName = 'DialogMain';
+DialogScroll.displayName = 'DialogScroll';
