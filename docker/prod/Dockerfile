@@ -20,7 +20,7 @@ WORKDIR /var/www/prod
 COPY --from=builder --chown=1000:1000 /var/www/prod/.next ./.next
 COPY --from=builder /var/www/prod/node_modules ./node_modules
 COPY --from=builder /var/www/prod/package.json ./package.json
-COPY --from=builder /var/www/prod/next.config.js ./next.config.js
+COPY --from=builder /var/www/prod/next.config.ts ./next.config.ts
 COPY --from=builder /var/www/prod/public ./public
 COPY --from=builder /var/www/prod/.env ./.env
 
