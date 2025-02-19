@@ -55,10 +55,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div id="scroll-to-top" />
         <AppThemeProvider>
-            <main className="mx-auto max-w-7xl px-4">
-                <AppLayoutHeader className="py-4 mx-auto max-w-7xl sticky top-0 z-10 bg-card" />
+            <main className="flex flex-col justify-between max-w-7xl px-4 min-h-screen mx-auto">
+                <AppLayoutHeader className="py-4 mx-auto max-w-7xl sticky top-0 z-10 bg-card w-full" />
                 {children}
-                <AppLayoutFooter className="p-4 mx-auto max-w-7xl" />
+                <AppLayoutFooter className="py-4 mx-auto max-w-7xl" />
             </main>
             <AppToaster />
         </AppThemeProvider>

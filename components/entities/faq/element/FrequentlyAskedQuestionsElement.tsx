@@ -1,6 +1,6 @@
 'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
-import React, {useState} from "react";
+import React, {MouseEventHandler, useState} from "react";
 
 /** 2 App - Components, Hooks */
 /** 3 Entities, Stores, Packages, Enums ... */
@@ -19,11 +19,9 @@ export const FrequentlyAskedQuestionsElement: React.FC<FrequentlyAskedQuestionsE
     const [expanded, setExpanded] = useState<boolean>(false);
 
     /**
-     * @param {HTMLButtonElement} event
-     *
      * @return {void}
      */
-    const toggleFAQ = (event: HTMLButtonElement): void => {
+    const toggleFAQ = (): void => {
         setExpanded((prevState: boolean) => !prevState);
     }
 

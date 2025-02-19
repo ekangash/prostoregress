@@ -58,6 +58,8 @@ export const Personal: React.FC<PersonalProps> = ({ className }): React.ReactEle
                             <Image
                                 className=" z-10"
                                 src="/img/snapedit.png"
+                                width={330}
+                                height={440}
                             />
                         </div>
 

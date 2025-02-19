@@ -1,11 +1,9 @@
 'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React, {useCallback} from 'react';
-import {FormProvider, useForm} from "react-hook-form";
+import {FormProvider, useForm, type ValidationMode, type UseFormReturn} from "react-hook-form";
 import {yupResolver} from '@hookform/resolvers/yup';
-import {ValidationMode} from "react-hook-form/dist/types/form";
 import {toast} from 'sonner';
-import {UseFormReturn} from "react-hook-form/dist/types";
 import {ObjectSchema} from "yup";
 
 /** 2 App - Components, Hooks */

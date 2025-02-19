@@ -8,9 +8,9 @@ import {Image} from "@/components/shared/image/Image";
 import {cn} from "@/packages/utils";
 
 /**
- * @interface ArticleCardProps
+ * @interface DocumentCardProps
  */
-interface ArticleCardProps {
+interface DocumentCardProps {
     title: string;
     description: string;
     cover: string;
@@ -27,7 +27,7 @@ interface ArticleCardProps {
  *
  * @return {React.ReactNode} Сформированные DOM узлы.
 */
-export const DocumentCard: React.FC<ArticleCardProps> = memo<ArticleCardProps>(({
+export const DocumentCard: React.FC<DocumentCardProps> = memo<DocumentCardProps>(({
     cover,
     title,
     description,

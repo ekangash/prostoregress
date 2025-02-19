@@ -40,7 +40,7 @@ export const PricesDialogReception: React.FC<CastsButtonsReceptionProps> = ({ ti
             const props = { title, cast, ...obj.only(data, ['fullname', 'email', 'message', "tg_login"]) };
 
             axios.post('/api/telegram', props).then(() => {
-                resolve();
+                resolve('');
                 setShipped(true);
             });
         }), {
@@ -48,7 +48,7 @@ export const PricesDialogReception: React.FC<CastsButtonsReceptionProps> = ({ ti
             success: 'Заявка успешно отправлена',
             error: 'Упс, неудачная отправка заявки :(',
         });
-    })
+    }, [])
 
     const resolver = useCallback(() => yupSupport.prepareSchemaWithLabels(['firstname', 'lastname'], {
         fullname: 'Наименование',
@@ -66,7 +66,7 @@ export const PricesDialogReception: React.FC<CastsButtonsReceptionProps> = ({ ti
             .string()
             .required('Требуется указать как к вам обращаться :)'),
         privacy: yup.boolean().oneOf([true], 'Требуется подтвердить обработку персональных данных :)'),
-    })))
+    })), []);
 
     return (
         <Dialog>

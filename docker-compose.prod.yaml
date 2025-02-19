@@ -1,14 +1,14 @@
-version: '3.7'
 services:
   prod-client:
-    container_name: prostoregress-prod-client
+    container_name: prostoregress-prod
     build:
       context: .
       dockerfile: docker/prod/Dockerfile
-    volumes:
-      - ./docker/prod/nginx/default.conf:/etc/nginx/nginx.conf:ro
     networks:
       - prod
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - NEXT_TELEMETRY_DISABLED=true
   prod-proxer:
     image: nginx:latest
     container_name: prostoregress-prod-proxer

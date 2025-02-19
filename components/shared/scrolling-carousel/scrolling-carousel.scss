@@ -1,0 +1,43 @@
+.scrolling-carousel {
+	display: flex;
+	overflow-x: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+.scrolling-carousel::-webkit-scrollbar {
+	/** WebKit */
+	display: none;
+}
+
+.scrolling-carousel > * {
+	flex: 0 0 auto;
+}
+
+.scrolling-carousel-sliding > * {
+	pointer-events: none;
+}
+.scrolling-carousel-scrollbar {
+	scrollbar-width: thin; /* Firefox 64 */
+	padding-bottom: 10px;
+}
+
+.scrolling-carousel-scrollbar::-webkit-scrollbar {
+	width: 20px;
+	height: 20px;
+}
+
+.scrolling-carousel-scrollbar::-webkit-scrollbar-track {
+	border-radius: 100vh;
+	background: #f7f4ed;
+}
+
+.scrolling-carousel-scrollbar::-webkit-scrollbar-thumb {
+	background: #e0cbcb;
+	border-radius: 100vh;
+	border: 3px solid #f6f7ed;
+}
+
+.scrolling-carousel-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #c0a0b9;
+}

@@ -28,7 +28,7 @@ interface FrequentlyAskedQuestionsProps {
 export const FrequentlyAskedQuestions: React.FC<FrequentlyAskedQuestionsProps> = ({ className = '' }): React.ReactElement => {
 
     return (
-        <div className={cn('max-w-5xl mx-auto flex flex-col md:flex-row gap-12', className)}>
+        <div className={cn('w-full flex flex-col md:flex-row gap-12', className)}>
             <div className="flex flex-col text-left basis-1/2">
                 <p className="inline-block font-semibold text-primary mb-2">Это интересно</p>
                 <p className="sm:text-3xl text-2xl font-extrabold text-base-content">Часто задаваемые вопросы</p>

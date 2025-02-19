@@ -16,13 +16,13 @@ interface CastsButtonsReceptionProps {
     title: string;
     description: string;
     cover: string;
-    preview: string;
+    content: React.ReactNode;
 }
 
 /**
  * @return {React.ReactElement} Сформированный DOM узел.
  */
-export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ title,description, preview, cover }): React.ReactElement => {
+export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ title,description, content, cover }): React.ReactElement => {
 
     return (
         <Dialog>
@@ -55,7 +55,7 @@ export const DocumentsDialogView: React.FC<CastsButtonsReceptionProps> = ({ titl
                         {description}
                     </div>
                     <div className="text-left text-md font-normal transition-all">
-                        {preview}
+                        {content}
                     </div>
                 </Dialog.Scroll>
             </Dialog.Content>

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-domains=("exoregress.ru www.exoregress.ru")
+domains=("prostoregress.ru www.prostoregress.ru")
 email="kangash1996@gmail.com" # Adding a valid address is strongly recommended
 staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits
 

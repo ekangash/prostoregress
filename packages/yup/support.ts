@@ -22,7 +22,7 @@ export const yupSupport =  {
     prepareSchemaWithLabels<R = ObjectSchema<any>>(attributeNames: string[], labels: object,  schema: { fields: object }): R {
         for (const attributeName of attributeNames) {
             if (obj.isset(schema.fields, attributeName)) {
-                schema['fields'][attributeName]['spec']['label'] = obj.get<string>(labels, attributeName, '');
+                schema['fields'][attributeName]['spec']['label'] = obj.get<object>(labels, attributeName, '');
             }
         }
 

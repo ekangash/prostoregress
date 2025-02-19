@@ -1,19 +1,18 @@
 'use client'
 /** 1 Node - Modules, Components, Hooks, Icons */
 import React, {useCallback} from 'react';
+import {Target, LayoutGrid, TrafficCone, Gem} from "lucide-react";
+
 /** 2 App - Components, Hooks */
 import {Button} from "@/components/shared/button/Button";
 import {AppLayoutLogo} from "@/components/app/layout/logo/AppLayoutLogo";
 import {AppThemeToggle} from "@/components/app/theme/toggle/AppThemeToggle";
 import {useScrollToAnchor} from "@/hooks/useScrollToAnchor";
+import {ScrollingCarousel} from "@/components/shared/scrolling-carousel/ScrollingCarousel";
 
 /** 3 Entities, Stores, Packages, Enums ... */
 import {cn} from "@/packages/utils";
 import {Icon} from "@/components/shared/icon/Icon";
-import {TrafficCone} from "lucide-react";
-import {Target} from "lucide-react";
-import {LayoutGrid} from "lucide-react";
-import {Gem} from "lucide-react";
 
 
 interface AppLayoutHeaderProps {
@@ -35,7 +34,9 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
           <div className="col-span-2 lg:col-span-1 order-1 flex">
               <AppLayoutLogo />
           </div>
-          <div className="col-span-3 lg:col-span-1 order-last lg:order-2 flex items-center justify-center space-x-1 py-1">
+          <ScrollingCarousel
+              className='col-span-3 lg:col-span-1 order-last lg:order-2 flex items-center space-x-1 py-1'
+          >
               <Button
                   onClick={() => onScrollToKnown()}
                   variant="secondary"
@@ -76,7 +77,7 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = ({ className }): 
                   />
                   Стоимость
               </Button>
-          </div>
+          </ScrollingCarousel>
           <div className="col-span-1 order-3 flex space-x-2 justify-end items-center">
               <AppThemeToggle />
               <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-2">
